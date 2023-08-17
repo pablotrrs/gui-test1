@@ -5,13 +5,17 @@ plugins {
 group = 'org.ungs'
 version = '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.github.pablotrrs:core-test1:Tag'
 }
 
 test {
